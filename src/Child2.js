@@ -3,8 +3,14 @@ import * as d3 from 'd3';
 
 class Child2 extends Component {
   componentDidMount() {
-    const data = this.props.data;
+    this.createChart(this.props.data);
+  };
 
+  componentDidUpdate() {
+    this.createChart(this.props.data);
+  };
+  
+  createChart = (data) => {
     const processed_data = [
       { day: 'Sun', avg: d3.mean(data.filter((d) => d.day === 'Sun').map((d) => +d.tip)) },
       { day: 'Sat', avg: d3.mean(data.filter((d) => d.day === 'Sat').map((d) => +d.tip)) },

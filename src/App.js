@@ -16,8 +16,8 @@ class App extends Component {
     let arr = []
     d3.csv(file, (file_data) => {
       arr.push(file_data);
+      this.setState({data:arr});
     });
-    this.setState({data:arr})
   }
 
   render() {

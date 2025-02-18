@@ -3,8 +3,14 @@ import * as d3 from 'd3';
 
 class Child1 extends Component {
   componentDidMount() {
-    const data = this.props.data;
+    this.createChart(this.props.data);
+  };
 
+  componentDidUpdate() {
+    this.createChart(this.props.data);
+  };
+  
+  createChart = (data) => {
     const margin = { top: 40, right: 50, bottom: 50, left: 60 };
     const width = 600;
     const height = 400;
