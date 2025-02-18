@@ -28,7 +28,7 @@ class Child2 extends Component {
     const innerWidth = width - margin.left - margin.right;
     const innerHeight = height - margin.top - margin.bottom;
 
-    const svg = d3.select('.container2').attr('width', width).attr('height', height).style('border', '1px solid lightgray');
+    const svg = d3.select('.container2').attr('width', width).attr('height', height);
 
     const innerChart = svg.select('.inner_chart2').attr('transform', `translate(${margin.left}, ${margin.top})`);
 

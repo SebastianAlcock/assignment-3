@@ -19,7 +19,7 @@ class Child1 extends Component {
     const max_tip = d3.max(data.map((d) => +d.tip));
     const max_total_bill = d3.max(data.map((d) => +d.total_bill));
 
-    const svg = d3.select('.container1').attr('width', width).attr('height', height).style('border', '1px solid lightgray').style('margin-bottom', '8px');
+    const svg = d3.select('.container1').attr('width', width).attr('height', height);
 
     const innerChart = svg.select('.inner_chart1').attr('transform', `translate(${margin.left}, ${margin.top})`);
 

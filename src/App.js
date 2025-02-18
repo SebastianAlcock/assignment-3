@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './App.css';
 import * as d3 from "d3";
 import Child1 from './Child1.js';
 import Child2 from './Child2.js';
@@ -22,7 +23,7 @@ class App extends Component {
 
   render() {
     return (
-      <div style={{display: 'flex', flexDirection: 'column'}}>
+      <div class='container'>
         <Child1
           data={this.state.data}
         />
