@@ -1,0 +1,11 @@
+{
+  "files": {
+    "main.js": "/assignment-3/static/js/main.c0ebe456.js",
+    "static/media/tips.csv": "/assignment-3/static/media/tips.43007c7e472255eef549.csv",
+    "index.html": "/assignment-3/index.html",
+    "main.c0ebe456.js.map": "/assignment-3/static/js/main.c0ebe456.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.c0ebe456.js"
+  ]
+}
