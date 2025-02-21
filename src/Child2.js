@@ -32,7 +32,7 @@ class Child2 extends Component {
 
     const innerChart = svg.select('.inner_chart2').attr('transform', `translate(${margin.left}, ${margin.top})`);
 
-    var xScale = d3.scaleBand().domain(['Sun', 'Sat', 'Thur', 'Fri']).range([0, innerWidth]);
+    var xScale = d3.scaleBand().domain(['Sun', 'Sat', 'Thur', 'Fri']).range([0, innerWidth]).padding(0.2);
     var yScale = d3.scaleLinear().domain([0, max_tip_avg]).range([innerHeight, 0]);
 
     const xAxis = d3.axisBottom(xScale);
@@ -41,10 +41,10 @@ class Child2 extends Component {
     innerChart.selectAll('rect')
       .data(processed_data)
       .join('rect')
-      .attr('width', xScale.bandwidth() - 30)
+      .attr('width', xScale.bandwidth())
       .attr('height', d => innerHeight - yScale(d.avg))
       .attr('fill', '#69b3a2')
-      .attr('x', d => xScale(d.day) + 15)
+      .attr('x', d => xScale(d.day))
       .attr('y', d => yScale(d.avg));
 
     innerChart
